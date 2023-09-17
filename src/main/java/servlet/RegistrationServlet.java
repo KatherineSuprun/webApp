@@ -1,5 +1,6 @@
 package servlet;
 
+import dto.Order;
 import dto.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -23,6 +24,7 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         User user = User.builder()
                 .username(req.getParameter("username"))
                 .lastName(req.getParameter("lastName"))
